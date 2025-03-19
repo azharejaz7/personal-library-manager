@@ -136,24 +136,28 @@ def display_statistics():
     print("------------ End --------------") 
     
 # App Title
-print("-------Personal Library Manager-------")
 
-for index, menu in enumerate(main_menu,start=1):
+
+while True:
+    print("-------Personal Library Manager-------")
+
+    for index, menu in enumerate(main_menu,start=1):
    
-    print(f"{index}.  {menu}." )
+     print(f"{index}.  {menu}." )
+    menu_choice = input("please Select A Menu from given number: ")   
 
 
-menu_choice = input("please Select A Menu from given number: ")   
-
-
-if menu_choice == "1":
-    addbook()  
-if menu_choice == "2":
-    remove_book()
-if menu_choice == "3":
-    SearchforBoook()
-if menu_choice == "4":
-    display_all_books()    
-if menu_choice=="5":
-    display_statistics()
-        
+    if menu_choice == "1":
+        addbook()  
+    if menu_choice == "2":
+        remove_book()
+    if menu_choice == "3":
+        SearchforBoook()
+    if menu_choice == "4":
+        display_all_books()    
+    if menu_choice=="5":
+        display_statistics()
+    if menu_choice =="6":
+        print("your Entry Saved in data_file.txt")
+        break
+           
